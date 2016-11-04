@@ -4,7 +4,7 @@ import math
 cap = cv2.VideoCapture(0)
 while(cap.isOpened()):
     ret, img = cap.read()
-    cv2.rectangle(img,(300,300),(100,100),(0,255,0),0)
+    cv2.rectangle(img,(3ggg00,300),(100,100),(0,255,0),0)
     crop_img = img[100:300, 100:300]
     grey = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)
     value = (35, 35)
@@ -50,16 +50,16 @@ while(cap.isOpened()):
         cv2.line(crop_img,start,end,[0,255,0],2)
         #cv2.circle(crop_img,far,5,[0,0,255],-1)
     if count_defects == 1:
-        cv2.putText(img,"not contained", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
+        cv2.putText(img,"One finger", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
     elif count_defects == 2:
-        str = "not contained"
+        str = "Two fingers"
         cv2.putText(img, str, (5,50), cv2.FONT_HERSHEY_SIMPLEX, 1, 2)
     elif count_defects == 3:
-        cv2.putText(img,"not contained", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
+        cv2.putText(img,"Three fingers", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
     elif count_defects == 4:
-        cv2.putText(img,"not contained", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
+        cv2.putText(img,"Four fingers", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
     else:
-        cv2.putText(img,"Hello World!!!", (50,50),\
+        cv2.putText(img,"Five fingers!", (50,50),\
                     cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
     #cv2.imshow('drawing', drawing)
     #cv2.imshow('end', crop_img)
