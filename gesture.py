@@ -4,7 +4,8 @@ import math
 cap = cv2.VideoCapture(0)
 while(cap.isOpened()):
     ret, img = cap.read()
-    cv2.rectangle(img,(3ggg00,300),(100,100),(0,255,0),0)
+    img = cv2.flip(img, 1)
+    cv2.rectangle(img,(300,300),(100,100),(0,255,0),0)
     crop_img = img[100:300, 100:300]
     grey = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)
     value = (35, 35)
